@@ -5,7 +5,7 @@
 //Plugins > Bio-Formats > Bio-Formats Plugins Configuration, then pick the format from the list (i.e. Zeiss CZI) and make sure the “Windowless” option is checked
 //and that "Enabled" is checked.
 
-function analyze_embryo(input_directory) {
+function analyze_embryo(input_directory, output_directory) {
 
 
 
@@ -27,9 +27,9 @@ setThreshold(33000, 65535); //Change 33000 to your desired minimum threshold
 run("Make Binary");
 run("Analyze Particles...", "  show=Outlines display exclude clear add in_situ");
 
-saveAs("Results", input_directory + "/" + title + ".csv"); //Analyze particle results
+saveAs("Results", output_directory + "/" + title + ".csv"); //Analyze particle results
 
-roiManager("Save", input_directory + "/" + title + "RoiSet.zip"); //Roiset
+roiManager("Save", output_directory + "/" + title + "RoiSet.zip"); //Roiset
 
 while (nImages>0) { // this while loop closes the open windows
           selectImage(nImages); 
@@ -38,10 +38,6 @@ while (nImages>0) { // this while loop closes the open windows
 	
 }
 
-while (nImages>0) { //This while loop closes the final set of open windows
-          selectImage(nImages); 
-          close(); 
-      } 	
 }
 
-analyze_embryo("/Users/davidtyrpak/Desktop/V96/10042017")
+analyze_embryo("/Users/davidtyrpak/Desktop/V96/10042017", "/Users/davidtyrpak/Desktop/V96/10042017/Analysis")
