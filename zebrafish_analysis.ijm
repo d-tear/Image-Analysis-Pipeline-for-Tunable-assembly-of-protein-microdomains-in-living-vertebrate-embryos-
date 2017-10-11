@@ -4,12 +4,26 @@
 function analyze_embryo(input_directory) {
 
 file_list = getFileList(input_directory);
-print(file_list.length);
 
 for(i = 0; i < file_list.length; i++){
 
 
 open(input_directory + "/" + file_list[i]);
+
+
+name = getTitle; 
+dotIndex = indexOf(name, "."); 
+title = substring(name, 0, dotIndex); 
+
+
+setThreshold(33000, 65535); //Change 33000 to your desired minimum threshold
+
+run("Make Binary");
+run("Analyze Particles...", "  show=Outlines display exclude clear add in_situ");
+
+saveAs("Results", input_directory + "/" + title + ".csv");
+
+roiManager("Save", input_directory + "/" + title + "RoiSet.zip");
 
 	
 }
