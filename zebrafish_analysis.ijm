@@ -29,9 +29,11 @@ setThreshold(33000, 65535); //Change 33000 to your desired minimum threshold
 
 run("Make Binary");
 run("Analyze Particles...", "  show=Outlines display exclude clear add in_situ");
+run("Nnd ");
+saveAs("Results", output_directory + "/" + title + "_NND" + ".csv"); //NND results
+close();
 
 saveAs("Results", output_directory + "/" + title + ".csv"); //Analyze particle results
-
 roiManager("Save", output_directory + "/" + title + "RoiSet.zip"); //Roiset
 selectWindow(name);
 saveAs("Tiff", output_directory + "/" + title);
