@@ -52,7 +52,8 @@ saveAs("Tiff", output_directory + "/" + title);
 
 }
 
-else{
+else{ //If your thresholded image is blank, your analyze particles results table will be empty and you will not generate an ROI set.
+	//So just select the thresholded blank image and save it. That is what this else block is doing.
 
 selectWindow(name);
 saveAs("Tiff", output_directory + "/" + title);
