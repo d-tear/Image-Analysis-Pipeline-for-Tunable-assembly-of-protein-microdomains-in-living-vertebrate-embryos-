@@ -71,8 +71,14 @@ while (nImages>0) { // this while loop closes the open windows
       } 	
 
 	}
-	
+
+
 }
+
+// This below code closes the final ROI Manager window. Note that the Console window will still stay open. I havent found a way to close it within the program yet. 
+//But it is not an error.
+selectWindow("ROI Manager"); 
+run("Close"); 
 
 
 
