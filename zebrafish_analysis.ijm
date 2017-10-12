@@ -32,7 +32,7 @@ run("Analyze Particles...", "  show=Outlines display exclude clear add in_situ")
 
 saveAs("Results", output_directory + "/" + title + ".csv"); //Analyze particle results
 
-roiManager("Save", output_directory + "/" + title + "RoiSet.zip"); //Roiset
+roiManager("Save", output_directory + "/" + title + "_RoiSet.zip"); //Roiset
 selectWindow(name);
 saveAs("Tiff", output_directory + "/" + title);
 
