@@ -13,6 +13,9 @@ file_list = getFileList(input_directory);
 
 for(i = 0; i < file_list.length; i++){
 
+	if (endsWith(file_list[i], ".czi")){
+
+
 
 open(input_directory + "/" + file_list[i]);
 
@@ -31,7 +34,7 @@ saveAs("Results", output_directory + "/" + title + ".csv"); //Analyze particle r
 
 roiManager("Save", output_directory + "/" + title + "RoiSet.zip"); //Roiset
 selectWindow(name);
-saveAs("Tiff", output_directory + "/" + title + "tif");
+saveAs("Tiff", output_directory + "/" + title);
 
 
 
@@ -39,8 +42,13 @@ while (nImages>0) { // this while loop closes the open windows
           selectImage(nImages); 
           close(); 
       } 	
+
+	}
 	
 }
+
+
+
 }
 
 
