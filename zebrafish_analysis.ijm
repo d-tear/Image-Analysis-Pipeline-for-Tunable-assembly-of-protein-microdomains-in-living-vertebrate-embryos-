@@ -5,6 +5,10 @@
 //Plugins > Bio-Formats > Bio-Formats Plugins Configuration, then pick the format from the list (i.e. Zeiss CZI) and make sure the “Windowless” option is checked
 //and that "Enabled" is checked.
 
+
+output_directory = "/Users/davidtyrpak/Desktop/V96/10042017/Analysis2"
+
+
 function analyze_embryo(input_directory, output_directory) {
 
 
@@ -29,14 +33,34 @@ setThreshold(33000, 65535); //Change 33000 to your desired minimum threshold
 
 run("Make Binary");
 run("Analyze Particles...", "  show=Outlines display exclude clear add in_situ");
-run("Nnd ");
-saveAs("Results", output_directory + "/" + title + "_NND" + ".csv"); //NND results
-close();
 
-saveAs("Results", output_directory + "/" + title + ".csv"); //Analyze particle results
+
+if ( nResults > 0){
+	
+run("Nnd ");
+selectWindow("Nearest Neighbor Distances");
+saveAs("Results", output_directory + "/" + title + "_NND" + ".csv"); 
+selectWindow(title + "_NND" + ".csv");
+run("Close"); 
+
+selectWindow("Results"); 
+saveAs("Results", output_directory + "/" + title + ".csv");//Analyze particle results
+run("Close"); 
 roiManager("Save", output_directory + "/" + title + "RoiSet.zip"); //Roiset
 selectWindow(name);
 saveAs("Tiff", output_directory + "/" + title);
+
+}
+
+else{
+
+selectWindow(name);
+saveAs("Tiff", output_directory + "/" + title);
+
+
+
+}
+
 
 
 
@@ -54,4 +78,4 @@ while (nImages>0) { // this while loop closes the open windows
 }
 
 
-analyze_embryo("/Users/davidtyrpak/Desktop/V96/10042017", "/Users/davidtyrpak/Desktop/V96/10042017/Analysis")
+analyze_embryo("/Users/davidtyrpak/Desktop/V96/10042017", "/Users/davidtyrpak/Desktop/V96/10042017/Analysis2")
