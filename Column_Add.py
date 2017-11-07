@@ -4,7 +4,7 @@ Created on Thu Oct 12 19:43:52 2017
 
 @author: davidtyrpak
 
-This code adds the Nearest neighbor Densities column from the one imagej results csv file to 
+This code adds the column from the Nearest Neighbor Densities imagej results csv file to 
 its corresponding analyze particle results csv file
 """
 import pandas as pd
@@ -12,10 +12,10 @@ import pandas as pd
 import os
 import glob
 
-path = "/Users/davidtyrpak/Desktop/SI/10042017/Analysis" ##This is the location where your NND results file and analyze particle files are located
+path = "/Users/davidtyrpak/Desktop/test/analysis" ##This is the location where your NND results file and analyze particle files are located
 extension = "csv"
 os.chdir(path)
-result = [i for i in glob.glob('*.{}'.format(extension))] ##find all the csv file in the directory
+result = [i for i in glob.glob('*.{}'.format(extension))] ##find all the csv files in the directory
 
 for file in result:
     if os.path.isfile(os.path.join(path,file)) and '_NND' in file: ##find all the csv files with _NND in their file name
