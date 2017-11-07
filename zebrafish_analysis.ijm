@@ -6,7 +6,6 @@
 //and that "Enabled" is checked.
 
 
-output_directory = "/Users/davidtyrpak/Desktop/V96/10042017/Analysis2"
 
 
 function analyze_embryo(input_directory, output_directory) {
@@ -17,7 +16,7 @@ file_list = getFileList(input_directory);
 
 for(i = 0; i < file_list.length; i++){
 
-	if (endsWith(file_list[i], ".czi")){
+	if (endsWith(file_list[i], ".czi")){ //Change ".czi" to your images' file format (e.g. ".tif", ".png", etc)
 
 
 
@@ -84,5 +83,5 @@ run("Close");
 
 }
 
-
-analyze_embryo("/Users/davidtyrpak/Desktop/V96/10042017", "/Users/davidtyrpak/Desktop/V96/10042017/Analysis2")
+//change the input and output file paths to your folders
+analyze_embryo("/Users/davidtyrpak/Desktop/test", "/Users/davidtyrpak/Desktop/test/analysis")
