@@ -1,5 +1,5 @@
-//This code analyzes the zebrafish images
-//output_directory, min_threshold, max_threshold
+//This code analyzes the particle number and areas from images of the 6hpf embryos above the transition temperature. The histogram of particle areas was created from the data this algorithim output
+
 
 //ensure Zeiss CZI format is Windowless and Enabled in Bio-Formats Plugin: 
 //Plugins > Bio-Formats > Bio-Formats Plugins Configuration, then pick the format from the list (i.e. Zeiss CZI) and make sure the “Windowless” option is checked
@@ -28,7 +28,7 @@ dotIndex = indexOf(name, ".");
 title = substring(name, 0, dotIndex); 
 
 
-setThreshold(33000, 65535); //Change 33000 to your desired minimum threshold
+setThreshold(33000, 65535); //We empirically determined that 33000 was the threshold needed to delineate fluorescent microdomains from yolk autofluorescence.
 
 run("Make Binary");
 run("Analyze Particles...", "  show=Outlines display exclude clear add in_situ");
