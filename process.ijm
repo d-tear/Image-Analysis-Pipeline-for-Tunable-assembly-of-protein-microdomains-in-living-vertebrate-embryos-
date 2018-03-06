@@ -3,7 +3,7 @@
 //In the apply_roi function, "input_directory" contains the tif images and roi files for each embryo.
 //"output_directory" is where you want the resulting csv files, ROIset.zip files, and thesholded images to be generated. 
 
-
+//Change the below line of code to your input and output folders
 apply_roi("/Users/davidtyrpak/Dropbox/Zebrafish_Manuscript/Data/Figure4_E/GFP-V96/48hr", "/Users/davidtyrpak/Dropbox/Zebrafish_Manuscript/Data/Figure4_E/GFP-V96/48hr/analysis");
 
 
