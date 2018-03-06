@@ -6,7 +6,7 @@ Pipeline 1: FIJI Macro and Python code for Particles Sizes in 6hpf zebrafish emb
 
 Code: zebrafish_analysis.ijm, Column_Add.py (Python 3)
 
-In the first step of this pipeline, use zebrafish_analysis.ijm and specify your input folder (where your images are located) 
+In the first step of Pipeline 1, use zebrafish_analysis.ijm and specify your input folder (where your images are located) 
 and your output folder (where you want the results to be located.) 
 Our images were 1024 by 1024 grayscale .czi files (zeiss format). 
 However, the macro can also handle other image formats (see line 19 to change to input image format).
@@ -20,7 +20,8 @@ the RoiSet.zip file and apply it to the input image to see where the code believ
 
 The NND code was written by Yuxiong Mao and can be found here: 
 https://icme.hpc.msstate.edu/mediawiki/index.php/Nearest_Neighbor_Distances_Calculation_with_ImageJ
-In the second step of the pipeline, use Column_Add.py to append the 
+
+In the second step of Pipeline 1, use Column_Add.py to append the 
 nearest neighbor distances column from InputImageName_NND_.csv to InputImageName.csv. 
 The resulting .csv file will have the name “Mergedresults_InputImageName.csv”
 
