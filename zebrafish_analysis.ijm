@@ -1,7 +1,7 @@
 //This code analyzes the particle number and areas from images of the 6hpf embryos above the transition temperature. The histogram of particle areas was created from the data this algorithim output
 
 
-//ensure Zeiss CZI format is Windowless and Enabled in Bio-Formats Plugin: 
+//If working with .czi format, ensure Zeiss CZI format is Windowless and Enabled in Bio-Formats Plugin: 
 //Plugins > Bio-Formats > Bio-Formats Plugins Configuration, then pick the format from the list (i.e. Zeiss CZI) and make sure the “Windowless” option is checked
 //and that "Enabled" is checked.
 
@@ -84,4 +84,5 @@ run("Close");
 }
 
 //change the input and output file paths to your folders
-analyze_embryo("/Users/davidtyrpak/Desktop/test", "/Users/davidtyrpak/Desktop/test/analysis")
+
+analyze_embryo("/Users/user/my_input_folder", "/Users/user/my_output_folder")
