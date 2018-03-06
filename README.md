@@ -28,7 +28,7 @@ Pipeline 2: FIJI Macro for GFP-ELP particle numbers in 24hpf and 48hpf zebrafish
 
 Code: process.ijm
 
-To use this code you will have to draw ROIs around the embryo, excluding the autofluorescent yolk and underbelly of the embryo (see the example images I added). The .roi files need to be in the same folder as your input images.
+To use this code you will have to draw ROIs around the embryo, excluding the autofluorescent yolk and underbelly of the embryo (see the example images I added: 24hpf.png, 48hpf.png). The .roi files need to be in the same folder as your input images.
 
 This code will produce three files for each input image:
 1) A .csv file containing the analyze particle results for the input image (“InputImageName.csv”)
