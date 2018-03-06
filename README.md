@@ -16,7 +16,7 @@ For each input image, zebrafish_analysis.ijm will generate four output files:
 2) A .csv file containing the analyze particle results for the input image (“InputImageName.csv”)
 3) A .tif file showing where the ROIs/particles are located in the input image (although you can also open 
 the RoiSet.zip file and apply it to the input image to see where the code believes the particles are located), 
-4) A NND.csv file which contains nearest neighbor distances for each particle in the ROiSet (“InputImageName_NND_.csv"). 
+4) A NND.csv file which contains nearest neighbor distances for each particle in the RoiSet (“InputImageName_NND_.csv"). 
 
 The NND code was written by Yuxiong Mao and can be found here: 
 https://icme.hpc.msstate.edu/mediawiki/index.php/Nearest_Neighbor_Distances_Calculation_with_ImageJ
@@ -29,7 +29,7 @@ Pipeline 2: FIJI Macro for GFP-ELP particle numbers in 24hpf and 48hpf zebrafish
 
 Code: process.ijm
 
-To use this code you will have to draw ROIs around the embryo, excluding the autofluorescent yolk and underbelly of the embryo (see the example images I added: 24hpf.png, 48hpf.png). The .roi files need to be in the same folder as your input images.
+To use this code you will have to draw ROIs around the embryo, excluding the autofluorescent yolk and underbelly of the embryo (see the example images I added: 24hpf.png, 48hpf.png). The .roi files need to be in the same folder as your input images. Our images were 1344 by 1024 grayscale tiff images.
 
 This code will produce three files for each input image:
 1) A .csv file containing the analyze particle results for the input image (“InputImageName.csv”)
