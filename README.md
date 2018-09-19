@@ -3,7 +3,7 @@ This repository contains FIJI and Python scripts used to analyze GFP-ELP assembl
 in the publication "Tunable assembly of protein-microdomains in living vertebrate embryos"
 https://onlinelibrary.wiley.com/doi/abs/10.1002/adbi.201800112
 
-Pipeline 1: FIJI Macro and Python code for Particles Sizes in 4 ~ 5 hpf zebrafish embryos (Figure 4 d in manuscript). 
+Pipeline 1: FIJI Macro and Python code for Particles Sizes in 4 ~ 5 hpf zebrafish embryos (Figure 4 b,d). 
 
 Code: zebrafish_analysis.ijm, Column_Add.py (Python 3)
 
@@ -26,7 +26,7 @@ In the second step of Pipeline 1, use Column_Add.py to append the
 nearest neighbor distances column from InputImageName_NND_.csv to InputImageName.csv. 
 The resulting .csv file will have the name “Mergedresults_InputImageName.csv”
 
-Pipeline 2: FIJI Macro for GFP-ELP particle numbers in 24hpf and 48hpf zebrafish embryos (Figure 4 d,e). 
+Pipeline 2: FIJI Macro for GFP-ELP particle numbers in 24hpf and 48hpf zebrafish embryos (Figure 4 c,e). 
 
 Code: process.ijm
 
