@@ -1,8 +1,9 @@
 # Image-Analysis-Pipeline-for-Tunable-assembly-of-protein-microdomains-in-living-vertebrate-embryos-
 This repository contains FIJI and Python scripts used to analyze GFP-ELP assembly inside of zebrafish embryos. The code was used
 in the publication "Tunable assembly of protein-microdomains in living vertebrate embryos"
+https://onlinelibrary.wiley.com/doi/abs/10.1002/adbi.201800112
 
-Pipeline 1: FIJI Macro and Python code for Particles Sizes in 4 ~ 5 hpf zebrafish embryos (Figure 4 b,c in manuscript). 
+Pipeline 1: FIJI Macro and Python code for Particles Sizes in 4 ~ 5 hpf zebrafish embryos (Figure 4 d in manuscript). 
 
 Code: zebrafish_analysis.ijm, Column_Add.py (Python 3)
 
