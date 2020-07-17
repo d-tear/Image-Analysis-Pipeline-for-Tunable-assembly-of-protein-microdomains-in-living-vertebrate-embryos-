@@ -1,4 +1,6 @@
 # Image-Analysis-Pipeline-for-Tunable-assembly-of-protein-microdomains-in-living-vertebrate-embryos-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3950515.svg)](https://doi.org/10.5281/zenodo.3950515)
+
 This repository contains FIJI and Python scripts used to analyze GFP-ELP assembly inside of zebrafish embryos. The code was used
 in the publication "Tunable assembly of protein-microdomains in living vertebrate embryos"
 https://onlinelibrary.wiley.com/doi/abs/10.1002/adbi.201800112
